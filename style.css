@@ -1,0 +1,104 @@
+*, 
+*::after, 
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family:'Cabin', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, rgba(15,6,6,1) 20%, rgba(22,2,2,1) 100%);
+    height: 100vh;
+}
+
+header {
+    background-color: #2A0A0A97;
+    box-shadow: 4px 3px 40px -10px rgba(182, 4, 4, 0.67);
+    border-radius: 0.8rem 0.8rem 9rem 9rem;
+
+    height: calc(50vh - 20rem);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+
+    list-style: none;
+}
+
+header ul li {
+    color: #690500;
+    text-shadow: -2.4px 1px 1px rgba(0,0,0,0.62);
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+header ul li.active {
+    position: relative;
+}
+
+header ul li i.fa-solid.fa-droplet {
+    position: absolute;
+    bottom: -1.4rem;
+    right: 1rem;
+    font-size: 1.5rem;
+
+    animation: dropDown 450ms ease-out forwards;
+}
+
+header ul li#AB i.fa-solid.fa-droplet {
+    position: absolute;
+    right: 1.45rem;
+}
+
+header ul li:not(.active) i.fa-solid.fa-droplet {
+    display: none;
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.2rem);
+    }
+
+    25% {
+        opacity: 0.75;
+        transform: translateY(-1rem);
+    }
+    
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    75%{
+        opacity: 1;
+        transform: translateY(.3rem);
+    }
+
+    95% {
+        opacity: 1;
+        transform: translateY(-0.2rem);
+    }
+
+    100% {
+        opacity: 0.75;
+        transform: translateY(0);
+    }
+}
