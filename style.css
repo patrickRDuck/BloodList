@@ -133,7 +133,7 @@ main ul li {
     
     padding: .7rem 1.3rem;
     height: 10vh;
-    width: 85vw;
+    width: 28rem;
 
     background-color: #2A0A0A;
     border-radius: 1.5rem;
@@ -148,6 +148,7 @@ main ul li:hover {
 
 main ul li .profile {
     flex: 0.5;
+    height: 100%;
     overflow: hidden;
     border-radius: 1rem;
     border: 1px solid #3a0a0a;
