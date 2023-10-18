@@ -126,6 +126,7 @@ main ul li {
     display: flex;
     gap: 2rem;
     justify-content: space-between;
+    align-items: center;
    
     box-shadow: -4px -2px 0px 1.5px rgb(41, 0, 0);
     border: 1px solid rgba(0,0,0,0.20);
@@ -168,7 +169,7 @@ main ul li .aboutPeople {
 }
 
 main ul li .aboutPeople p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-shadow: -2px .8px 1px rgba(0,0,0,0.62);
 }
 
