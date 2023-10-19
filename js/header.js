@@ -50,8 +50,8 @@ export default class header {
         const [bloodTypeFilter] = (window.location.search).split("?").splice(1,1)
         
         if (bloodTypeFilter) {
-            
-            const elementToInsertBloodDrop = document.querySelector(`#${bloodTypeFilter}`)
+
+            const elementToInsertBloodDrop = document.getElementById(bloodTypeFilter)
             if (!elementToInsertBloodDrop.classList.contains('active')) {
                 this.insertElementBloodDrop(elementToInsertBloodDrop)
             }
