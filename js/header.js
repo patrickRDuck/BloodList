@@ -48,13 +48,14 @@ export default class header {
 
     filterBlood () {
         const [bloodTypeFilter] = (window.location.search).split("?").splice(1,1)
-
-        const elementToInsertBloodDrop = document.querySelector(`#${bloodTypeFilter}`)
-        if (!elementToInsertBloodDrop.classList.contains('active')) {
-            this.insertElementBloodDrop(elementToInsertBloodDrop)
-        }
         
         if (bloodTypeFilter) {
+            
+            const elementToInsertBloodDrop = document.querySelector(`#${bloodTypeFilter}`)
+            if (!elementToInsertBloodDrop.classList.contains('active')) {
+                this.insertElementBloodDrop(elementToInsertBloodDrop)
+            }
+
             const filterGuests = guests.filter((guest) => guest.bloodType === bloodTypeFilter)
     
             renderList(filterGuests)
