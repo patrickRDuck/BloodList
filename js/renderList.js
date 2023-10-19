@@ -1,9 +1,8 @@
-import guests from "./utils/guests.js"
-
-export default () => {
+export default (guestslist) => {
     const elementUl = document.querySelector('main ul')
+    elementUl.innerHTML = ''
 
-    guests.forEach((guest) => {
+    guestslist.forEach((guest) => {
        const HTML = `
         <li>
             <div class="profile">
@@ -20,4 +19,6 @@ export default () => {
         `
         elementUl.innerHTML += HTML
     })
+
+    console.log(elementUl)
 }

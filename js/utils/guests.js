@@ -24,6 +24,11 @@ export default [
         age: 19,
         bloodType: 'O-'
     },
+    {
+        name: 'Canoa Furada',
+        age: 19,
+        bloodType: "B+"
+    },
     // {
     //     name: 'Manuel Migez',
     //     age: 19,

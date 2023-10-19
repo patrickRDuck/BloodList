@@ -1,8 +1,7 @@
 import header from "./header.js";
-import renderList from "./renderList.js";
-
-renderList()
 
 const headerController = new header()
+
+headerController.filterBlood()
 
 document.querySelectorAll('header ul li').forEach((li) => li.addEventListener('click', (event) => headerController.addBloodDrop(event)))
