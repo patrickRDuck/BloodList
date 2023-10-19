@@ -29,16 +29,16 @@ export default [
         age: 19,
         bloodType: "B+"
     },
-    // {
-    //     name: 'Manuel Migez',
-    //     age: 19,
-    //     bloodType: 'AB-'
-    // },
-    // {
-    //     name: 'Biro Biro ',
-    //     age: 19,
-    //     bloodType: 'A+'
-    // },
+    {
+        name: 'Manuel Miguez',
+        age: 19,
+        bloodType: 'AB-'
+    },
+    {
+        name: 'Biro Biro',
+        age: 19,
+        bloodType: 'A+'
+    },
     {
         name: 'Ana Raimundo',
         age: 20,

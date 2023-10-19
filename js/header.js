@@ -5,13 +5,15 @@ export default class header {
     addBloodDrop (event) {
         const elementLi = event.target
         const liBloodDrop = elementLi.querySelector('i')
+
         const hostUrl = window.location.origin
+        const pathUrl = window.location.pathname
 
         if (elementLi.classList.contains('active')) {
             elementLi.classList.remove('active')
             liBloodDrop.remove()
 
-            window.history.pushState({}, '', hostUrl)
+            window.history.pushState({}, '', `${hostUrl}${pathname}`)
             return
         }
         
@@ -35,7 +37,7 @@ export default class header {
         elementLi.classList.add('active')
         elementLi.append(elementToAdd)
 
-        window.history.pushState({}, '', `${hostUrl}/?${elementLi.dataset.bloodtype}`)
+        window.history.pushState({}, '', `${hostUrl}${pathUrl}?${elementLi.dataset.bloodtype}`)
         this.filterBlood()
     }
 

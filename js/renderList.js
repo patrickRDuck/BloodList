@@ -19,6 +19,4 @@ export default (guestslist) => {
         `
         elementUl.innerHTML += HTML
     })
-
-    console.log(elementUl)
 }
