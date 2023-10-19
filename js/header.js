@@ -7,7 +7,7 @@ export default class header {
         const liBloodDrop = elementLi.querySelector('i')
 
         const hostUrl = window.location.origin
-        const pathUrl = window.location.pathname
+        const pathUrl = window.location.pathname ?? '/BloodList/'
 
         if (elementLi.classList.contains('active')) {
             elementLi.classList.remove('active')
