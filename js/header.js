@@ -31,19 +31,28 @@ export default class header {
             }
         })
 
-        const elementToAdd = document.createElement("i");
-        elementToAdd.className = "fa-solid fa-droplet";
-        elementToAdd.style.color = "#b80808";
-
-        elementLi.classList.add('active')
-        elementLi.append(elementToAdd)
+        this.insertElementBloodDrop(elementLi)
 
         window.history.pushState({}, '', `${hostUrl}${pathUrl}?${elementLi.dataset.bloodtype}`)
         this.filterBlood()
     }
 
+    insertElementBloodDrop (element) {
+        const elementToAdd = document.createElement("i");
+        elementToAdd.className = "fa-solid fa-droplet";
+        elementToAdd.style.color = "#b80808";
+
+        element.classList.add('active')
+        element.append(elementToAdd)
+    }
+
     filterBlood () {
         const [bloodTypeFilter] = (window.location.search).split("?").splice(1,1)
+
+        const elementToInsertBloodDrop = document.querySelector(`#${bloodTypeFilter}`)
+        if (!elementToInsertBloodDrop.classList.contains('active')) {
+            this.insertElementBloodDrop(elementToInsertBloodDrop)
+        }
         
         if (bloodTypeFilter) {
             const filterGuests = guests.filter((guest) => guest.bloodType === bloodTypeFilter)
