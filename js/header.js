@@ -14,6 +14,7 @@ export default class header {
             liBloodDrop.remove()
 
             window.history.pushState({}, '', `${hostUrl}${pathUrl}`)
+            this.filterBlood()
             return
         }
         
